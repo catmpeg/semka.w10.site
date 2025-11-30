@@ -5,17 +5,41 @@
     font-display: swap;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     font: 12px 'ConsolasLFBold', monospace;
-    background: #000 url(images/bg.jpg) center/cover fixed;
     color: #fff;
     text-align: center;
+    background-color: #000;
+    background-image: url('images/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 a {
     color: #ffae00;
-    background-color: transparent;
     text-decoration: none;
+    background-color: transparent;
 }
 
 a:hover, a:active {
